@@ -146,7 +146,7 @@
 }
 
 .card{
-    box-shadow: 0 0px 4px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 8px;
 }
@@ -269,16 +269,30 @@
     }
 
     .sponsors{
-        display: grid;
+        /* display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        padding: 20px;
+        padding: 20px; */
+        max-width: 375px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px;
+        margin: 30px auto;
+    }
+
+    .sponsors::after, .sponsors::before{
+        display: none;
+    }
+
+    .sponsors img{
+        width: 20%;
     }
 
     .sponsors > :nth-last-child(1){
-        grid-column: span 2;
+        /* grid-column: span 2;
         justify-self: center;
-        width: 60%;
+        width: 60%; */
         /* margin: auto; */
     }
 
@@ -291,6 +305,7 @@
 
     .Popular-Collection{
         padding: 30px;
+        margin: 50px auto;
     }
 
     .card{
